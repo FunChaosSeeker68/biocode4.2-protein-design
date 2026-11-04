@@ -11,6 +11,10 @@ def create_rnd_seq(loops):
         negative_cont=0
         ran_loops=ran_loops+1
         amino_attrabute_list = ["non_poler", "positive_charge", "negative_charge","poler"]
+        non_poler_list = ["A", "V", "L", "I", "P", "F", "M", "W", "G", "C"]
+        poler_list = ["N" , "Q", "S", "T", "Y"]
+        positive_charge_list = ["K" , "R" , "H"]
+        negative_charge_list = ["D" , "E"]
         file.write("loop number:"+ran_loops)
         while num_in < length:
             if num_in ==0:
@@ -28,9 +32,14 @@ def create_rnd_seq(loops):
             else:
                 num_in=num_in+1
                 choise=random.choice(amino_attrabute_list)
-                if 
-                
-
+                if choise == "non_poler":
+                    file.write(random.choice(non_poler_list))
+                elif choise == "poler":
+                    file.write(random.choice(poler_list))
+                elif choise == "positive_charge":
+                    file.write(random.choice(positive_charge_list))
+                elif choise == "negative_charge":
+                    file.write(random.choice(negative_charge_list))
 
 
 
